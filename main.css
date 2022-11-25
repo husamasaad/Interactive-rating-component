@@ -1,0 +1,153 @@
+:root {
+  --main-color: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --items-bg: hsl(213, 19%, 16%);
+  --bg-color-alt: hsl(213, 19%, 18%);
+  --bg-color: hsl(216, 12%, 8%);
+  font-size: 15px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 400;
+  background-color: var(--bg-color);
+  font-size: var(--fs-15);
+  color: var(--White);
+}
+
+
+section {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+.hidden {
+  display: none;
+}
+
+.container {
+  width: 330px;
+  background: linear-gradient(
+    hsl(213, 19%, 15%),
+    hsl(213, 19%, 10%)
+    );
+  padding: 30px;
+  border-radius: 20px;
+  box-sizing: 0 0 0 2px;
+}
+
+.icon {
+  background-color: var(--items-bg);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-bottom: 30px;
+}
+
+.icon img {
+  width: 40%;
+}
+
+.container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.container p {
+  color: var(--Light-Grey);
+  line-height: 1.2;
+  font-size: .8rem;
+  margin-bottom: 20px;
+}
+
+.rating-btns {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
+.rating-btns span {
+  background-color: var(--items-bg);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  line-height: 41px;
+  text-align: center;
+  color: var(--Light-Grey);
+  margin-bottom: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: .3s;
+}
+.rating-btns span:hover {
+  background-color: var(--main-color);
+  color: var(--White);
+}
+.rating-btns span:hover:not(span.active) ~ span {
+  background-color: var(--Light-Grey);
+  color: var(--White);
+}
+.rating-btns span.active {
+  background-color: var(--main-color);
+  color: var(--White);
+}
+.rating-btns span.cancel{
+  background-color: var(--items-bg);
+}
+
+
+.container button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsla(0, 0%, 100%, 0.747);
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 20px;
+  font-variant: small-caps;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.container button:hover {
+  background-color: var(--White);
+  color: var(--main-color);
+}
+
+
+/* Thanks State */
+
+#thanks-state .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#thanks-state .result {
+  background-color: var(--items-bg);
+  padding: 5px 20px;
+  border-radius: 20px;
+  color: var(--main-color);
+  font-size: 1rem;
+  margin-top: 30px;
+  font-weight: 400;
+}
+
+#thanks-state h2 {
+  margin-top: 30px;
+}
+
+
+
